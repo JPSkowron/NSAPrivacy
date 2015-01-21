@@ -71,6 +71,27 @@
         NSArray *mapItems = response.mapItems;
         MKMapItem *mapItem = mapItems.firstObject;
         self.textView.text = [NSString stringWithFormat:@"You're a guilty SOB! Report to: %@", mapItem.name];
+        [self getDirectionTo:mapItem];
+    }];
+}
+
+-(void)getDirectionTo: (MKMapItem *)destination {
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc]init];
+    request.source = [MKMapItem mapItemForCurrentLocation];
+    request.destination = destination;
+
+    MKDirections *direction = [[MKDirections alloc] initWithRequest:request];
+    [direction calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+        NSArray *routes = response.routes;
+        MKRoute *route = routes.firstObject;
+        NSMutableString *instructions = [[NSMutableString alloc]init];
+        for (MKRouteStep *step in route.steps) {
+            NSLog(@"%@", step.instructions);
+            [instructions appendFormat:@"%@\n", step.instructions];
+        }
+        self.textView.text = instructions;
+
+        self.textView.text = [[response.routes.firstObject valueForKeyPath:@"steps.instructions"] componentsJoinedByString:@"\n"];
     }];
 }
 
