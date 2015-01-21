@@ -14,6 +14,7 @@
 		50D5F3BC1A70124B0013CE38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D5F3BB1A70124B0013CE38 /* Images.xcassets */; };
 		50D5F3BF1A70124B0013CE38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50D5F3BD1A70124B0013CE38 /* LaunchScreen.xib */; };
 		50D5F3CB1A70124C0013CE38 /* DearCitizenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D5F3CA1A70124C0013CE38 /* DearCitizenTests.m */; };
+		50D5F3D51A7015E20013CE38 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D5F3D41A7015E20013CE38 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		50D5F3C41A70124C0013CE38 /* DearCitizenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DearCitizenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D5F3C91A70124C0013CE38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50D5F3CA1A70124C0013CE38 /* DearCitizenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DearCitizenTests.m; sourceTree = "<group>"; };
+		50D5F3D41A7015E20013CE38 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D5F3D51A7015E20013CE38 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		50D5F3A21A70124B0013CE38 = {
 			isa = PBXGroup;
 			children = (
+				50D5F3D41A7015E20013CE38 /* CoreLocation.framework */,
 				50D5F3AD1A70124B0013CE38 /* DearCitizen */,
 				50D5F3C71A70124C0013CE38 /* DearCitizenTests */,
 				50D5F3AC1A70124B0013CE38 /* Products */,
